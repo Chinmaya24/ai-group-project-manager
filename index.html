@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Project Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🧠 AI Project Manager Dashboard</h1>
+
+<div class="container">
+
+  <!-- LEFT PANEL -->
+  <div class="panel">
+    <h2>Add Task</h2>
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <select id="memberSelect">
+      <option value="A">Member A</option>
+      <option value="B">Member B</option>
+    </select>
+    <button onclick="addTask()">Add Task</button>
+
+    <h2>Tasks</h2>
+    <div id="taskList"></div>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="panel ai-panel">
+    <h2>🤖 AI Insights</h2>
+    <p id="suggestion">No data yet</p>
+
+    <h3>📊 Performance</h3>
+    <p id="stats"></p>
+
+    <h3>🧠 Memory Logs</h3>
+    <ul id="memoryLog"></ul>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

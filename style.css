@@ -1,0 +1,60 @@
+body {
+  font-family: 'Segoe UI';
+  background: #0f172a;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.panel {
+  flex: 1;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.ai-panel {
+  background: #111827;
+  border: 1px solid #3b82f6;
+}
+
+input, select {
+  padding: 8px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 5px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task {
+  background: #334155;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.delayed {
+  border-left: 5px solid red;
+}
+
+.completed {
+  border-left: 5px solid green;
+}
