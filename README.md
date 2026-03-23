@@ -1,76 +1,71 @@
-# AI Group Project Manager (with Hindsight Memory)
+# 🧠 AI Group Project Manager (with Hindsight Memory)
 
-## Overview
+> Most project management tools track work.  
+> This one learns from it.
+
+---
+
+## 🚀 Overview
 We built an AI-powered project manager that helps student teams coordinate tasks, track progress, and improve collaboration over time using persistent memory.
 
-Unlike traditional tools, this system **learns from past team behavior** using Hindsight and continuously improves task allocation and decision-making.
+Unlike traditional tools, this system doesn’t reset after every session. It **remembers past interactions, learns team behavior, and adapts decisions over time** using Hindsight.
 
 ---
 
-## Problem
+## ❗ Problem
+
 Students working on group projects often face:
-- Poor task coordination
-- Lack of accountability
-- Repeated mistakes
-- Missed deadlines
+- Poor task coordination  
+- Lack of accountability  
+- Repeated mistakes  
+- Missed deadlines  
 
-Most tools don’t remember past interactions or learn from them.
-
----
-
-## Solution
-Our AI agent uses **Hindsight memory** to:
-- Store past team interactions (tasks, meetings, deadlines)
-- Recall relevant project history
-- Learn patterns in team behavior
-
-This allows the system to act like an **intelligent project manager**.
+Existing tools (Trello, Notion, etc.) only track tasks — they **don’t learn from past behavior**.
 
 ---
 
-## Features
-- Smart task assignment based on past performance
-- Automatic meeting summaries
-- Deadline tracking & reminders
-- Learning from past mistakes
-- Productivity insights for team members
+## 💡 Solution
+
+We built an AI agent that:
+- Stores past team interactions  
+- Recalls relevant history during decisions  
+- Learns patterns in team performance  
+
+This allows the system to act like an **adaptive project manager**, not just a tracking tool.
 
 ---
 
-## How Hindsight is Used
-We use Hindsight as the core memory system:
-- **Retain:** Store team actions (task assignments, completions, discussions)
-- **Recall:** Retrieve relevant past events during decision making
-- **Learn:** Improve recommendations over time
-
-Example:
-If a team member frequently delays tasks, the system learns this and assigns critical tasks to more reliable members.
+### Workflow:
+1. User assigns/completes tasks  
+2. Data is stored in Hindsight  
+3. AI retrieves similar past events  
+4. System makes improved decisions  
 
 ---
 
-## Tech Stack
-- Frontend: React
-- Backend: Node.js / FastAPI
-- AI: LLM (Groq / OpenAI)
-- Memory: Hindsight
-- Database: MongoDB
+## 🧠 How Hindsight is Used
+
+We use Hindsight as the core memory layer:
+
+- **Retain:** Store team actions (tasks, deadlines, discussions)  
+- **Recall:** Retrieve relevant past interactions  
+- **Learn:** Improve future decisions  
 
 ---
 
-## Demo Flow
-1. Create project
-2. Assign tasks
-3. Conduct meeting → AI stores discussion
-4. Next session → AI suggests improved task allocation
+## 🧩 Example: Memory Storage
 
----
-
-## Future Scope
-- Integration with Slack / Teams
-- Real-time collaboration tracking
-- Predictive deadline risk analysis
-
----
-
-## Conclusion
-This project demonstrates how **AI agents with memory** can significantly improve collaboration by learning from experience.
+```json
+{
+  "member": "A",
+  "task": "Frontend UI",
+  "status": "Delayed",
+  "timestamp": "2026-03-20"
+}
+function assignTask(member, history) {
+  if (history[member].delays > 2) {
+    return "Assign low priority task";
+  }
+  return "Assign critical task";
+}
+## ⚙️ How It Works
